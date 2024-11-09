@@ -1,22 +1,37 @@
-<!-- index.html -->
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Featured Speakers</title>
+  <title>Responsive Featured Speakers Carousel</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <script src="userData.js" defer></script>
   <script src="app.js" defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
   <div class="container mx-auto py-8">
-    <h2 class="text-center text-2xl font-bold mb-4">View our Featured Speakers for the Event</h2>
+    <h2 class="text-center text-2xl font-bold mb-4">
+      View our Featured Speakers for the Event
+    </h2>
     <p class="text-center text-gray-600 mb-8">
       Speakers are core contributors and industry thought leaders working at companies that push for innovation.
     </p>
-    <div id="carousel" class="flex justify-center gap-4">
-      <!-- Cards will be rendered here -->
+
+    <!-- Carousel Wrapper -->
+    <div class="relative w-full max-w-5xl mx-auto">
+      <button id="prevBtn" class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10">
+        &#10094;
+      </button>
+      <div id="carousel" class="flex gap-4 overflow-x-auto scroll-smooth mx-auto">
+        <!-- Cards will be dynamically rendered here -->
+      </div>
+      <button id="nextBtn" class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md z-10">
+        &#10095;
+      </button>
     </div>
   </div>
 
@@ -29,3 +44,4 @@
   </div>
 </body>
 </html>
+
